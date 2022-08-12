@@ -1,10 +1,10 @@
 # Store Manager API
 
-API for an e-commerce store with a product and a sales endpoint.
+API for an e-commerce store with product and sales endpoints.
 
-  - Built with Node, Express, MySQL and Docker  
+  - Built with Node, Express, MySQL, and Docker  
   - 100% unit test coverage with Mocha, Chai, and Sinnon
-  - Model, service and controller arquitecture
+  - Model, Service, Controller architecture
   
 To run locally clone the repository and run the following commands:
 <br>
@@ -17,7 +17,7 @@ $ npm start
 $ npm run test:mocha
 ```
 <br>
-Product methods are:
+Product methods:
 
   - GET | http://localhost:3000/products
   - GET | http://localhost:3000/products/:id
@@ -31,7 +31,7 @@ Request Body format for PUT and POST:
 {"name": "productx"}
 ```
 <br>
-Sales methods are:
+Sales methods:
 
   - GET | http://localhost:3000/sales
   - GET | http://localhost:3000/sales/:id
