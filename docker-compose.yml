@@ -1,0 +1,32 @@
+version: "3"
+services:
+  node:
+    build: .
+    container_name: store_manager
+    tty: true
+    stdin_open: true
+    command: bash
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_HOST: db
+      PORT: '3000'
+
+  db:
+    container_name: store_manager_db
+    platform: linux/x86_64
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - 3306:3306
+
+networks:
+  default:
+    name: store_manager_net
